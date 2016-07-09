@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html xmlns:og='http://ogp.me/ns#'>
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Doppler 的 LP 世界</title>
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+  <meta content="" property="og:title">
+  <meta content="" property="og:site_name">
+  <meta content="/img/common/FacebookShare.jpg" property="og:image">
+  <meta content="" property="og:description">
+  <link href='//fonts.googleapis.com/css?family=Volkhov:700' rel='stylesheet' type='text/css'>
+  <link href="/assets/img/common/web-icon.png" rel="shortcut icon">
+  <link rel="stylesheet" href="/assets/css/normalize.css">
+  <link rel="stylesheet" href="/assets/css/index.css">
+  <script src="/assets/js/font.js"></script>
+</head>
+<body onload="getDopplerData(),ShowTime()">
+<section>
+  <div class="doppler-content" >
+    <img class="logo" src="assets/img/common/logo.png" alt="">
+    <h3>雖然跟我無關，但目前 LP 已獲取 <br><b>0</b>元</h3>
+    <div class="doppler-howmuch">
+      <div id="mrbartender">
+        <div class="text">
+          <a href="http://mrbartender.selfpick-inc.com/" target="_blank">
+            <span class="title"></span>
+          </a><br>
+          <span class="pledged">成功繳款：<b>0</b>元</span>
+          <span class="backer-count">贊助人數：<b>0</b>人</span>
+          <span class="online">2016.05.09</span>
+        </div>
+      </div>
+      <div id="jimmy">
+        <div class="text">
+          <a href="http://happystation.cc/" target="_blank">
+            <span class="title"></span>
+          </a><br>
+          <span class="pledged">成功繳款：<b>0</b>元</span>
+          <span class="backer-count">贊助人數：<b>0</b>人</span>
+          <span class="online">2016.05.24</span>
+        </div>
+      </div>
+      <div id="jarvish">
+        <div class="text">
+          <a href="http://jarvish.com.tw/" target="_blank">
+            <span class="title"></span>
+          </a><br>
+          <span class="pledged">成功繳款：<b>0</b>元</span>
+          <span class="backer-count">贊助人數：<b>0</b>人</span>
+          <span class="online">2016.07.06</span>
+        </div>
+      </div>
+      <div id="xltt">
+        <div class="text">
+          <a href="http://www.xltt-eyewear.com/" target="_blank">
+            <span class="title"></span>
+          </a><br>
+          <span class="pledged">成功繳款：<b>0</b>元</span>
+          <span class="backer-count">贊助人數：<b>0</b>人</span>
+          <span class="online">2016.07.07</span>
+        </div>
+      </div>
+    </div>
+    <div class="doppler-time">
+      現在時間：
+      <span class="a"></span>
+      <span class="b"></span>
+    </div>
+  </div>
+</section>
+</body>
+<script src="/assets/js/jquery-2.1.4.min.js"></script>
+<script src="/assets/js/animateNumber.js"></script>
+<script src="/assets/js/bar.js"></script>
+<script src="/assets/js/index.js"></script>
+<script>
+  function ShowTime() {
+    　var nowDate = new Date();
+      $(".doppler-time .a").text(nowDate.getFullYear() + " 年 " + (nowDate.getMonth() + 1) + " 月 " + nowDate.getDate() + " 日 ");
+      $(".doppler-time .b").text(nowDate.getHours() + " 點 " + nowDate.getMinutes() + " 分 " + nowDate.getSeconds() + " 秒 " );
+    　setTimeout('ShowTime()',1000);
+  }
+  function getDopplerData() {
+      $.getJSON("https://mrbartender.backme.tw/api/projects/247.json?token=0fa5951348a6a93608fbe4daafb86d3b",function(data){
+        var a = Math.round(data.money_pledged * 10) / 10
+        $("#mrbartender .title").text(data.title);
+        $("#mrbartender .pledged b").animateNumbers(a, true, 5000);
+        $("#mrbartender .backer-count b").animateNumbers(data.backer_count, true, 3000);
+      })
+      $.getJSON("https://happystation.backme.tw/api/projects/264.json?token=aad79e40ff0a7820f28358794e47d5b9",function(data){
+        var b = Math.round(data.money_pledged * 10) / 10
+        $("#jimmy .title").text(data.title);
+        $("#jimmy .pledged b").animateNumbers(b, true, 5000);
+        $("#jimmy .backer-count b").animateNumbers(data.backer_count, true, 3000);
+      })
+      $.getJSON("https://jarvish.backme.tw/api/projects/294.json?token=7039dd9382b56c6cb810140b5fd79e6c",function(data){
+        var c = Math.round(data.money_pledged * 10) / 10
+        $("#jarvish .title").text(data.title);
+        $("#jarvish .pledged b").animateNumbers(c, true, 5000);
+        $("#jarvish .backer-count b").animateNumbers(data.backer_count, true, 3000);
+      })
+      $.getJSON("https://xltt.backme.tw/api/projects/279.json?token=70b7205cf8c6e0faed4d24c32c0215a9",function(data){
+        var d = Math.round(data.money_pledged * 10) / 10
+        $("#xltt .title").text(data.title);
+        $("#xltt .pledged b").animateNumbers(d, true, 5000);
+        $("#xltt .backer-count b").animateNumbers(data.backer_count, true, 3000);
+      });
+      var a = parseInt($("#mrbartender .pledged b").text().replace(/,/g,""), 10)
+      var b = parseInt($("#jimmy .pledged b").text().replace(/,/g,""), 10)
+      var c = parseInt($("#jarvish .pledged b").text().replace(/,/g,""), 10)
+      var d = parseInt($("#xltt .pledged b").text().replace(/,/g,""), 10)
+      var all = a + b + c + d
+      $("h3 b").delay(1000).animateNumbers(all, true, 2500);
+      setTimeout('getDopplerData()',4500);
+  }
+</script>
+</html>
