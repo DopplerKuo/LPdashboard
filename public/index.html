@@ -15,19 +15,18 @@
   <link href="/assets/img/common/web-icon.png" rel="shortcut icon">
   <link rel="stylesheet" href="/assets/css/normalize.css">
   <link rel="stylesheet" href="/assets/css/index.css">
+  <link rel="stylesheet" href="/assets/css/doppler-introbox.css">
   <script src="/assets/js/font.js"></script>
 </head>
 <body onload="getDopplerData(),ShowTime()">
-<section>
+<section class="doppler">
   <div class="doppler-content" >
     <img class="logo" src="assets/img/common/logo.png" alt="">
     <h3>雖然跟我無關，但目前 LP 已獲取 <br><b>0</b>元</h3>
     <div class="doppler-howmuch">
       <div id="mrbartender">
         <div class="text">
-          <a href="http://mrbartender.selfpick-inc.com/" target="_blank">
-            <span class="title"></span>
-          </a><br>
+          <span class="title"></span><br>
           <span class="pledged">成功繳款：<b>0</b>元</span>
           <span class="backer-count">贊助人數：<b>0</b>人</span>
           <span class="online">2016.05.09</span>
@@ -35,9 +34,7 @@
       </div>
       <div id="jimmy">
         <div class="text">
-          <a href="http://happystation.cc/" target="_blank">
-            <span class="title"></span>
-          </a><br>
+          <span class="title"></span><br>
           <span class="pledged">成功繳款：<b>0</b>元</span>
           <span class="backer-count">贊助人數：<b>0</b>人</span>
           <span class="online">2016.05.24</span>
@@ -45,9 +42,7 @@
       </div>
       <div id="jarvish">
         <div class="text">
-          <a href="http://jarvish.com.tw/" target="_blank">
-            <span class="title"></span>
-          </a><br>
+          <span class="title"></span><br>
           <span class="pledged">成功繳款：<b>0</b>元</span>
           <span class="backer-count">贊助人數：<b>0</b>人</span>
           <span class="online">2016.07.06</span>
@@ -55,9 +50,7 @@
       </div>
       <div id="xltt">
         <div class="text">
-          <a href="http://www.xltt-eyewear.com/" target="_blank">
-            <span class="title"></span>
-          </a><br>
+          <span class="title"></span><br>
           <span class="pledged">成功繳款：<b>0</b>元</span>
           <span class="backer-count">贊助人數：<b>0</b>人</span>
           <span class="online">2016.07.07</span>
@@ -71,18 +64,103 @@
     </div>
   </div>
 </section>
+<section class="doppler-introbox">
+  <div class="bg-close"></div>
+  <div data-show="mrbartender" class="box mrbartender">
+    <span class="close">關閉</span>
+    <div class="img">
+      <img class="web" src="/assets/img/main/web/mrbartender.png" alt="">
+      <a href="https://www.facebook.com/zyingho" target="_blank" class="whoisdesigner">
+        <span class="who"></span>
+        <h3>設計師：</h3>
+        <span>Zying He</span>
+      </a>
+    </div>
+    <div class="text">
+      <h2>台灣原創網路影集 Mr.Bartender</h2>
+      <p>
+      台灣原創網路影集《Mr.Bartender》，每個故事都是從選擇開始的。透過大家的支持與選擇，將在台灣影視圈燃起一顆信號彈。
+      </p>
+    </div>
+    <div class="btn">
+      <a href="http://mrbartender.selfpick-inc.com/" target="_blank">前往網站</a>
+    </div>
+  </div>
+  <div data-show="jimmy" class="box jimmy">
+    <span class="close">關閉</span>
+    <div class="img">
+      <img class="web" src="assets/img/main/web/jimmy.png" alt="">
+      <a href="https://www.facebook.com/jhumiaoting" target="_blank" class="whoisdesigner">
+        <span class="who"></span>
+        <h3>設計師：</h3>
+        <span>MiaoTing</span>
+      </a>
+    </div>
+    <div class="text">
+      <h2>幾米 X 宜蘭幸福轉運站</h2>
+      <p>
+      關於這個世界你擔心什麼？在這裡，有一群特別的孩子，雖不擅長與世界溝通，但因為有了我們的陪伴，總有一天，他們會大聲地對大家說：世界別為我擔心！
+      </p>
+    </div>
+    <div class="btn">
+      <a href="http://happystation.cc/" target="_blank">前往網站</a>
+    </div>
+  </div>
+  <div data-show="jarvish" class="box jarvish">
+    <span class="close">關閉</span>
+    <div class="img">
+      <img class="web" src="/assets/img/main/web/jarvish.png" alt="">
+      <a href="https://www.facebook.com/taiwankiss1" target="_blank" class="whoisdesigner">
+        <span class="who"></span>
+        <h3>設計師：</h3>
+        <span>李建緯</span>
+      </a>
+    </div>
+    <div class="text">
+      <h2>ALL IN ONE 智慧安全帽</h2>
+      <p>
+      Monaco Evo S 結合台灣尖端科技與比利時安全帽大廠 LAZER 百年工藝，不只是世界最輕，更結合了語音控制、抗震防水廣角攝影機、雲端儲存與自動警報系統，讓智慧安全帽帶給你更多安全。
+      </p>
+    </div>
+    <div class="btn">
+      <a href="http://www.jarvish.com.tw/" target="_blank">前往網站</a>
+    </div>
+  </div>
+  <div data-show="xltt" class="box xltt">
+    <span class="close">關閉</span>
+    <div class="img">
+      <img class="web" src="/assets/img/main/web/xltt.png" alt="">
+      <a href="https://www.facebook.com/zin.chu.14" target="_blank" class="whoisdesigner">
+        <span class="who"></span>
+        <h3>設計師：</h3>
+        <span>Zin Chu</span>
+      </a>
+    </div>
+    <div class="text">
+      <h2>XLTt 時尚濾藍光機能眼鏡</h2>
+      <p>
+      劉軒攜手全家共創品牌 XLTt 打造兼具時尚與機能的多功能藍光眼鏡；XLTt 有配上濾藍光鏡片、隱藏式前掛、彈性高的鏡框與鏡腳設計。
+      </p>
+    </div>
+    <div class="btn">
+      <a href="http://www.xltt-eyewear.com/" target="_blank">前往網站</a>
+    </div>
+  </div>
+</section>
 </body>
 <script src="/assets/js/jquery-2.1.4.min.js"></script>
 <script src="/assets/js/animateNumber.js"></script>
 <script src="/assets/js/bar.js"></script>
 <script src="/assets/js/index.js"></script>
 <script>
+  // 現在時間 洞六三洞 未補修人員起床
   function ShowTime() {
     　var nowDate = new Date();
       $(".doppler-time .a").text(nowDate.getFullYear() + " 年 " + (nowDate.getMonth() + 1) + " 月 " + nowDate.getDate() + " 日 ");
       $(".doppler-time .b").text(nowDate.getHours() + " 點 " + nowDate.getMinutes() + " 分 " + nowDate.getSeconds() + " 秒 " );
     　setTimeout('ShowTime()',1000);
   }
+  // 4.5秒 更新一次 api
   function getDopplerData() {
       $.getJSON("https://mrbartender.backme.tw/api/projects/247.json?token=0fa5951348a6a93608fbe4daafb86d3b",function(data){
         var a = Math.round(data.money_pledged * 10) / 10

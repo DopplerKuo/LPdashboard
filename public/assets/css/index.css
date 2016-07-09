@@ -10,6 +10,7 @@ html, body {
   line-height: 1.7;
   padding: 0;
   margin: 0;
+  background-color: #161325;
 }
 
 a {
@@ -20,6 +21,11 @@ a {
 
 h1, h2, h3, h4 {
   margin: 0;
+}
+
+.doppler.blur {
+  -webkit-filter: blur(3px);
+          filter: blur(3px);
 }
 
 section {
@@ -33,10 +39,14 @@ section {
 
 @-webkit-keyframes gogo {
   0% {
+    -webkit-filter: blur(30px);
+            filter: blur(30px);
     -webkit-transform: translate3d(0, 20%, 0);
             transform: translate3d(0, 20%, 0);
   }
   100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
     -webkit-transform: translate3d(0, 0%, 0);
             transform: translate3d(0, 0%, 0);
   }
@@ -44,10 +54,14 @@ section {
 
 @keyframes gogo {
   0% {
+    -webkit-filter: blur(30px);
+            filter: blur(30px);
     -webkit-transform: translate3d(0, 20%, 0);
             transform: translate3d(0, 20%, 0);
   }
   100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
     -webkit-transform: translate3d(0, 0%, 0);
             transform: translate3d(0, 0%, 0);
   }
@@ -119,6 +133,16 @@ section {
   margin: 0 auto 20px;
   background-color: #2F2B45;
   box-shadow: 0 40px 50px 0px rgba(0, 0, 0, 0.55);
+  transition: .3s ease;
+  cursor: pointer;
+  opacity: .95;
+}
+
+.doppler-howmuch > div:hover {
+  opacity: 1;
+  -webkit-transform: scale3d(0.99, 0.99, 1);
+          transform: scale3d(0.99, 0.99, 1);
+  box-shadow: 0 20px 30px 0px rgba(0, 0, 0, 0.55);
 }
 
 .doppler-howmuch > div:nth-child(1) {
@@ -182,23 +206,17 @@ section {
   margin: auto 0 auto auto;
 }
 
-.doppler-howmuch .text a {
-  display: inline-block;
-  width: auto;
-  height: auto;
-}
-
 .doppler-howmuch .text .title {
-  display: block;
-  width: 230px;
-  line-height: 23px;
   box-shadow: 2px 0 0 -1px rgba(255, 255, 255, 0.5);
-  padding-right: 15px;
+  width: 230px;
+  display: block;
+  line-height: 23px;
+  padding-right: 10px;
 }
 
 .doppler-howmuch .text .pledged {
-  width: 300px;
-  margin: 20px 0 20px 13px;
+  width: 280px;
+  margin: 20px 0 20px 15px;
 }
 
 .doppler-time {
@@ -228,14 +246,11 @@ section {
   .doppler-howmuch .text span {
     font-size: 17px;
   }
-  .doppler-howmuch .text a {
-    width: 100%;
-  }
   .doppler-howmuch .text .title {
     width: 100%;
     line-height: 23px;
-    box-shadow: 0 2px 0 -1px rgba(255, 255, 255, 0.5);
     padding: 10px 0;
+    box-shadow: 0 2px 0 -1px rgba(255, 255, 255, 0.5);
   }
   .doppler-howmuch .text .pledged {
     width: 300px;
@@ -245,8 +260,8 @@ section {
 
 @media screen and (max-width: 768px) {
   .doppler-howmuch .text .title {
-    width: calc( 100% - 120px);
     box-shadow: 0 2px 0 -1px rgba(255, 255, 255, 0.3);
+    width: calc( 100% - 120px);
   }
   .doppler-howmuch .text .pledged {
     margin: 10px 10px;
@@ -271,9 +286,9 @@ section {
     display: none;
   }
   .doppler-howmuch .text .title {
+    box-shadow: 0 2px 0 -1px rgba(255, 255, 255, 0.5);
     width: 100%;
     line-height: 23px;
-    box-shadow: 0 2px 0 -1px rgba(255, 255, 255, 0.5);
     padding: 10px 0;
   }
   .doppler-howmuch .text .pledged {

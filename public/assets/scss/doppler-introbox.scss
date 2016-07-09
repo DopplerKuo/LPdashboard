@@ -1,0 +1,136 @@
+$jarvish: #39a5d0;
+.doppler-introbox {
+	display: none;
+	position: fixed;
+	z-index: 20;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-image: none;
+	.bg-close {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		cursor: pointer;
+	}
+	.close {
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 60px;
+		height: 60px;
+		line-height: 60px;
+		text-align: center;
+		background-color: #000;
+		color: #fff;
+		z-index: 1;
+		font-weight: 700;
+		cursor: pointer;
+	}
+	.box {
+		display: none;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 95%;
+		max-width: 750px;
+		height: auto;
+		max-height: 700px;
+		background-color: rgba(0,0,0,.7);
+		padding: 25px;
+		border-radius: 10px;
+		margin: auto;
+		animation: show .3s ease 0s 1 both;
+		@keyframes show {
+		    0%{ transform: translate3d(0,10%,0); }
+		  100%{ transform: translate3d(0,0%,0); }
+		}
+		.img {
+			position: relative;
+			width: 100%;
+			.web {
+				width: 100%;
+			}
+		}
+		.text {
+			color: #fff;
+			padding: 0 10px;
+			h2 {
+				font-weight: 400;
+				letter-spacing: 1px;
+			}
+			p {
+				margin: 5px auto;
+				opacity: .8;
+			}
+		}
+		.btn {
+			opacity: .8;
+			width: 120px;
+			line-height: 28px;
+			height: 30px;
+			margin: 30px auto 0;
+			text-align: center;
+			border-radius: 20px;
+			box-shadow: inset 0 0 0 1.5px #FF608A;
+			transition: .3s ease;
+			a {
+				color: #FFF;
+				letter-spacing: 2px;
+				font-weight: 700;
+				transition: .1s;
+			}
+			&:hover {
+				background-color: #FF608A;
+			}
+		}
+	}
+	.whoisdesigner {
+		position: relative;
+		bottom: 10px;
+		right: 0;
+		width: auto;
+		padding: 25px 7px 0px;
+		box-sizing: border-box;
+		display: flex;
+		align-items: center;
+		font-size: 17px;
+		letter-spacing: 1px;
+		h3 {
+			font-size: 17px;
+			display: inline-block;
+		}
+		.who {
+			display: inline-block;
+			width: 40px;
+			height: 40px;
+			border-radius: 30px;
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			margin-right: 15px;
+		}
+		span {
+			font-weight: 700;
+		}
+	}
+}
+.mrbartender .who { background-image: url('../img/main/designers/zying.jpg'); }
+.jimmy .who { background-image: url('../img/main/designers/miao.jpg'); }
+.jarvish .who { background-image: url('../img/main/designers/wei.png'); }
+.xltt .who { background-image: url('../img/main/designers/zin.png'); }
+
+@media screen and (max-width:600px){
+	.doppler-introbox .box .text h2 {
+		font-size: 20px;
+		line-height: 1.3;
+	}
+	.doppler-introbox .box {
+		padding: 5px;
+	}
+}

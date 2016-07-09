@@ -1,19 +1,20 @@
 $(document).ready(function() {
-  //loading
-  $(window).load(function() {
-    $("#loading").delay(600).fadeOut();
+  $(".text a").click(function(e) {
+    e.preventdefault();
   });
-  var progress = 0;
-  $("img").load(function() {
-    progress += 100 / $("img").length;
-    var percent = Math.round(progress) + "%";
-    $("#loading .txt").text(percent);
-    $("#loading .ld-bar").css("width", percent);
+  $(".doppler-howmuch>div").click(function() {
+    var targetShow = $(this).attr('id');
+    $(".doppler-introbox").fadeIn(500);
+    $('.box[data-show=' + targetShow + ']').fadeIn(0);
+    $(".doppler").addClass('blur');
+    $("body").css("overflow-y","hidden");
   });
-  //loading END
-
-  $(".number-20").animateNumbers(20, true, 2800);
-  $(".number-100").animateNumbers(100, true, 3800);
+  $(".close,.bg-close").click(function() {
+    $(".doppler-introbox").fadeOut(300);
+    $('.box').fadeOut(0);
+    $(".doppler").removeClass('blur');
+    $("body").css("overflow-y","auto");
+  });
 
 });
 
@@ -24,13 +25,6 @@ $(document).ready(function() {
 // sr.reveal('.sec3 .reveal',400);
 // sr.reveal('.sec4 .reveal',400);
 // sr.reveal('.sec5 .reveal',340);
-
-
-// // 視差滾動
-// $(window).load(function() {
-//     var scene = document.getElementById('scene');
-//     var parallax = new Parallax(scene);
-// });
 
 
 
