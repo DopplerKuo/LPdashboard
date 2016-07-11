@@ -10,13 +10,15 @@
   <meta content="DopplerKuo" property="og:title">
   <meta content="DopplerKuo" property="og:site_name">
   <meta content="/assets/img/common/FacebookShare.png" property="og:image">
-  <meta content="" property="og:description">
+  <meta content="DopplerKuo" property="og:description">
   <link href='//fonts.googleapis.com/css?family=Volkhov:700' rel='stylesheet' type='text/css'>
   <link href="/assets/img/common/web-icon.png" rel="shortcut icon">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="/assets/css/normalize.css">
   <link rel="stylesheet" href="/assets/css/index.css">
   <link rel="stylesheet" href="/assets/css/doppler-introbox.css">
   <script src="/assets/js/font.js"></script>
+  <script></script>
 </head>
 <body onload="getDopplerData(),ShowTime()">
 <section class="doppler">
@@ -67,14 +69,16 @@
 <section class="doppler-introbox">
   <div class="bg-close"></div>
   <div data-show="mrbartender" class="box mrbartender">
-    <span class="close">關閉</span>
+    <span class="close">
+      <i class="fa fa-times"></i>
+    </span>
+    <a href="https://www.facebook.com/zyingho" target="_blank" class="whoisdesigner">
+      <span class="who"></span>
+      <h3>設計師：</h3>
+      <span>Zying He</span>
+    </a>
     <div class="img">
-      <img class="web" src="/assets/img/main/web/mrbartender.png" alt="">
-      <a href="https://www.facebook.com/zyingho" target="_blank" class="whoisdesigner">
-        <span class="who"></span>
-        <h3>設計師：</h3>
-        <span>Zying He</span>
-      </a>
+      <img class="web" src="/assets/img/main/web/mrbartender.jpg" alt="">
     </div>
     <div class="text">
       <h2>台灣原創網路影集 Mr.Bartender</h2>
@@ -87,14 +91,16 @@
     </div>
   </div>
   <div data-show="jimmy" class="box jimmy">
-    <span class="close">關閉</span>
+    <span class="close">
+      <i class="fa fa-times"></i>
+    </span>
+    <a href="https://www.facebook.com/jhumiaoting" target="_blank" class="whoisdesigner">
+      <span class="who"></span>
+      <h3>設計師：</h3>
+      <span>MiaoTing</span>
+    </a>
     <div class="img">
-      <img class="web" src="assets/img/main/web/jimmy.png" alt="">
-      <a href="https://www.facebook.com/jhumiaoting" target="_blank" class="whoisdesigner">
-        <span class="who"></span>
-        <h3>設計師：</h3>
-        <span>MiaoTing</span>
-      </a>
+      <img class="web" src="/assets/img/main/web/jimmy.jpg" alt="">
     </div>
     <div class="text">
       <h2>幾米 X 宜蘭幸福轉運站</h2>
@@ -107,14 +113,16 @@
     </div>
   </div>
   <div data-show="jarvish" class="box jarvish">
-    <span class="close">關閉</span>
+    <span class="close">
+      <i class="fa fa-times"></i>
+    </span>
+    <a href="https://www.facebook.com/taiwankiss1" target="_blank" class="whoisdesigner">
+      <span class="who"></span>
+      <h3>設計師：</h3>
+      <span>李建緯</span>
+    </a>
     <div class="img">
-      <img class="web" src="/assets/img/main/web/jarvish.png" alt="">
-      <a href="https://www.facebook.com/taiwankiss1" target="_blank" class="whoisdesigner">
-        <span class="who"></span>
-        <h3>設計師：</h3>
-        <span>李建緯</span>
-      </a>
+      <img class="web" src="/assets/img/main/web/jarvish.jpg" alt="">
     </div>
     <div class="text">
       <h2>ALL IN ONE 智慧安全帽</h2>
@@ -127,14 +135,16 @@
     </div>
   </div>
   <div data-show="xltt" class="box xltt">
-    <span class="close">關閉</span>
+    <span class="close">
+      <i class="fa fa-times"></i>
+    </span>
+    <a href="https://www.facebook.com/zin.chu.14" target="_blank" class="whoisdesigner">
+      <span class="who"></span>
+      <h3>設計師：</h3>
+      <span>Zin Chu</span>
+    </a>
     <div class="img">
-      <img class="web" src="/assets/img/main/web/xltt.png" alt="">
-      <a href="https://www.facebook.com/zin.chu.14" target="_blank" class="whoisdesigner">
-        <span class="who"></span>
-        <h3>設計師：</h3>
-        <span>Zin Chu</span>
-      </a>
+      <img class="web" src="/assets/img/main/web/xltt.jpg" alt="">
     </div>
     <div class="text">
       <h2>XLTt 時尚濾藍光機能眼鏡</h2>
@@ -152,6 +162,7 @@
 <script src="/assets/js/animateNumber.js"></script>
 <script src="/assets/js/bar.js"></script>
 <script src="/assets/js/index.js"></script>
+
 <script>
   // 現在時間 洞六三洞 未補修人員起床
   function ShowTime() {
