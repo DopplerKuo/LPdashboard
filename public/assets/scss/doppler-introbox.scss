@@ -32,20 +32,23 @@ $jarvish: #39a5d0;
 	.box {
 		display: none;
 		position: relative;
+		width: 95%;
+		max-width: 700px;
+		top: 50%;
 		left: 0;
 		right: 0;
-		top: 50%;
-		transform: translateY(-50%);
-		width: 95%;
-		max-width: 600px;
 		background-color: rgba(0,0,0,.7);
 		padding: 20px;
 		border-radius: 10px;
 		margin: 0 auto;
-		animation: show .3s ease 0s 1 both;
-		@keyframes show {
-		    0%{ transform: translate3d(0,10%,0); }
-		  100%{ transform: translate3d(0,-50%,0); }
+		animation: start 1s ease 0s 1 both;
+		@keyframes showUp {
+		    0%{ transform: translate3d(0, 15px, 0); }
+		  100%{ transform: translate3d(0, -50%, 0); }
+		}
+		@keyframes showDown {
+		    0%{ transform: translate3d(0, -50%, 0); }
+		  100%{ transform: translate3d(0, 15px, 0); }
 		}
 		.img {
 			position: relative;
@@ -130,11 +133,21 @@ $jarvish: #39a5d0;
 .xltt .who { background-image: url('../img/main/designers/zin.png'); }
 
 @media screen and (max-width:600px){
+	.doppler-introbox .whoisdesigner {
+		margin-top: 0;
+		.who { margin-left: 0; }
+	}
 	.doppler-introbox .box .text h2 {
 		font-size: 20px;
 		line-height: 1.3;
 	}
 	.doppler-introbox .box {
-		padding: 5px;
+		padding: 5px 10px;
+		.img {
+			height: calc( 100vh - 350px );
+		}
+		.btn {
+			margin: 15px auto;
+		}
 	}
 }

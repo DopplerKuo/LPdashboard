@@ -5,17 +5,21 @@ $(document).ready(function() {
   $(".doppler-howmuch>div").click(function() {
     var targetShow = $(this).attr('id');
     $(".doppler-introbox").fadeIn(500);
-    $('.box[data-show=' + targetShow + ']').fadeIn(0);
+    $('.box[data-show=' + targetShow + ']').fadeIn(500).css("animation-name", "showUp");;
     $(".doppler").addClass('blur');
     $("body").css("overflow-y","hidden");
   });
-  $(".close,.bg-close").click(function() {
-    $(".doppler-introbox").fadeOut(300);
-    $('.box').fadeOut(0);
+  $(".close, .bg-close").click(function() {
+    $(".doppler-introbox, .box").fadeOut(500);
+    $(".box").css("animation-name", "showDown");
     $(".doppler").removeClass('blur');
     $("body").css("overflow-y","auto");
   });
-
+});
+$(window).load(function() {
+  // 一開始進來
+  $(".doppler-content").fadeIn(4000);
+  $(".doppler-content").css("display","flex");
 });
 
 // //reveal效果
