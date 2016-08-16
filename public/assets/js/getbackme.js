@@ -17,11 +17,15 @@ function getDopplerData() {
     $.getJSON("https://xltt.backme.tw/api/projects/279.json?token=70b7205cf8c6e0faed4d24c32c0215a9",function(data){
       updateContent("xltt", data);
     });
+    $.getJSON("https://500e.backme.tw/api/projects/324.json?token=681f2f97c4b36783a8a5a4c568bd0003",function(data){
+      updateContent("e500", data);
+    });
     var a = parseInt($("#mrbartender .pledged b").text().replace(/,/g,""), 10)
     var b = parseInt($("#jimmy .pledged b").text().replace(/,/g,""), 10)
     var c = parseInt($("#jarvish .pledged b").text().replace(/,/g,""), 10)
     var d = parseInt($("#xltt .pledged b").text().replace(/,/g,""), 10)
-    var all = a + b + c + d
+    var e = parseInt($("#e500 .pledged b").text().replace(/,/g,""), 10)
+    var all = a + b + c + d + e
     $("h3 b").delay(1000).animateNumbers(all, true, 2500);
     _jf.flush();
     setTimeout('getDopplerData()',4500);
