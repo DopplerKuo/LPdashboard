@@ -23,13 +23,17 @@ function getDopplerData() {
     $.getJSON("https://icca-asia.backme.tw/api/projects/335.json?token=543c25a8adc387eaf1745cc58e3d10f4",function(data){
       updateContent("icca", data);
     });
+    $.getJSON("https://ticwatch2.backme.tw/api/projects/384.json?token=d5b00e053a823f07d0f5ce99e36ec261",function(data){
+      updateContent("ticwatch2", data);
+    });
     var a = parseInt($("#mrbartender .pledged b").text().replace(/,/g,""), 10)
     var b = parseInt($("#jimmy .pledged b").text().replace(/,/g,""), 10)
     var c = parseInt($("#jarvish .pledged b").text().replace(/,/g,""), 10)
     var d = parseInt($("#xltt .pledged b").text().replace(/,/g,""), 10)
     var e = parseInt($("#e500 .pledged b").text().replace(/,/g,""), 10)
     var f = parseInt($("#icca .pledged b").text().replace(/,/g,""), 10)
-    var all = a + b + c + d + e + f
+    var g = parseInt($("#ticwatch .pledged b").text().replace(/,/g,""), 10)
+    var all = a + b + c + d + e + f + g
     $("h3 b").delay(1000).animateNumbers(all, true, 2500);
     _jf.flush();
     setTimeout('getDopplerData()',4500);
