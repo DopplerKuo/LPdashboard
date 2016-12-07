@@ -32,7 +32,7 @@ function getDopplerData() {
     var d = parseInt($("#xltt .pledged b").text().replace(/,/g,""), 10)
     var e = parseInt($("#e500 .pledged b").text().replace(/,/g,""), 10)
     var f = parseInt($("#icca .pledged b").text().replace(/,/g,""), 10)
-    var g = parseInt($("#ticwatch .pledged b").text().replace(/,/g,""), 10)
+    var g = parseInt($("#ticwatch2 .pledged b").text().replace(/,/g,""), 10)
     var all = a + b + c + d + e + f + g
     $("h3 b").delay(1000).animateNumbers(all, true, 2500);
     _jf.flush();
